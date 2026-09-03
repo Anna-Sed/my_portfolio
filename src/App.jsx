@@ -1,121 +1,75 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import "./styles/main.css"
+import sun from './img/icons/sun.svg'
+import moon from './img/icons/moon.svg'
+import github from './img/icons/gitHub.svg'
+import tg from './img/icons/tg.png'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className='App'> 
+      <nav className='nav'>
+        <div className="container">
+          <div className="nav-row">
+            <a className='logo' href='#'><strong>My</strong> portfolio</a> 
+            <button className="dark-mode-btn">
+              <img src={sun} alt="Light mode" className="dark-mode-btn__icon"></img>
+              <img src={moon} alt="Dark mode" className="dark-mode-btn__icon"></img>
+            </button>
+            <ul className="nav-list">
+              <li className="nav-list__item"><a href="./index.html" className="nav-list__link nav-list__link--active">Home</a></li>
+              <li className="nav-list__item"><a href="./projects.html" className="nav-list__link">Projects</a></li>
+              <li className="nav-list__item"><a href="./contacts.html" className="nav-list__link">Contacts</a></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
+      </nav>
+
+      <header className='header'>
+        <div className="header__wrapper">
+            <h1 className="header__title">
+                <strong>Hi, my name is <em>Anna</em></strong><br></br>
+                a frontend developer
+            </h1>
+            <div className="header__text">
+                <p>with passion for learning and creating.</p>
+            </div>
+            <a href="#!" className="btn">Download CV</a>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      </header>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
+      <main className="section">
+        <div className="container">
+          <ul className="content-list">
+            <li className="content-list__item">
+              <h2 className="title-2">Frontend</h2>
+              <p>JavaScript, TypeScript, ReactJS, Redux, HTML, CSS, NPM, BootStrap</p>
             </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
+            <li className="content-list__item">
+              <h2 className="title-2">Backend</h2>
+              <p>NodeJS</p>
             </li>
           </ul>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      </main>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <footer className='footer'>
+        <div className="container">
+          <div className="footer__wrapper">
+            <ul className="social">
+              {/* <li className="social__item"><a href="#!"><img src="./img/icons/vk.svg" alt="Link" /></a></li> */}
+              {/* <li className="social__item"><a href="#!"><img src="./img/icons/instagram.svg" alt="Link" /></a></li> */}
+              {/* <li className="social__item"><a href="#!"><img src="./img/icons/twitter.svg" alt="Link" /></a></li> */}
+              <li className="social__item"><a href="https://github.com/Anna-Sed"><img src={github} alt="Link"/></a></li>
+              <li className="social__item"><a href="https://t.me/Ann_Sedeeva"><img src={tg} alt="Link" style={{ width: '38px' }}/></a></li>
+            </ul>
+            <div className="copyright">
+              <p>© 2026 Anna Sedeeva</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
   )
 }
 
